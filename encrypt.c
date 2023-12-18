@@ -1,12 +1,12 @@
 /*
-Name: hash.c
+Name: encrypt.c
 Written by: John C. Johnson
-Usage: ./hash [word]
+Usage: ./encrypt [word]
 Example:
 ./hash CSft
 "50C8rfvcYwAPI"
 
-Program is designed to gereate valid DES baised hashes for CS50/CS50x's crack.c
+The program is designed to encrypt a string with DES for CS50/CS50x's crack.c
 to use to test hashes to check if your program works.
 */
 
@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
     char *salt = "50";
     char *word = argv[1];
     char *hash = crypt(word, salt);
-    // Used quotes becuse it was easier to copy for hard coded strings.
-    printf("\"%s\"\n", hash);
+    printf("%s\n", hash);
     return 0;
 }
